@@ -277,12 +277,12 @@
       font-size: .85rem;
     }
 
-    .stats {
+    /* .stats {
       margin-top: 1.8rem;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
-    }
+    } */
 
     .stat {
       padding: 1rem 1.1rem;
@@ -540,9 +540,9 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .stats {
+      /* .stats {
         grid-template-columns: repeat(2, 1fr);
-      }
+      } */
     }
 
     @media (max-width: 860px) {
@@ -583,9 +583,9 @@
         padding: 1rem;
       }
 
-      .stats {
+      /* .stats {
         grid-template-columns: 1fr;
-      }
+      } */
 
       .hero-actions {
         flex-direction: column;
@@ -610,7 +610,7 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#about">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -638,7 +638,7 @@
         <a class="btn btn-secondary" href="mailto:robertoboulos002@gmail.com">Contact Me</a>
       </div>
 
-      <div class="stats">
+      <!-- <div class="stats">
         <div class="stat">
           <strong></strong>
           
@@ -655,7 +655,7 @@
         </div>
 
        
-      </div>
+      </div> -->
     </div>
 
     <!-- RIGHT: IMAGE -->
@@ -682,7 +682,7 @@
 
     <section id="about">
       <div class="container">
-        <div class="section-title">
+        <!-- <div class="section-title">
           <h2>About</h2>
           </div>
 
@@ -710,6 +710,7 @@
   
         <div class="card">
          <div class="section-title">
+         
           <h2>Contact</h2>
           </div>
 
@@ -743,7 +744,76 @@
               <span>↗</span>
             </a>
           </div>
-        </div>
+          <div class="grid-2">
+
+  <!-- ABOUT -->
+  <div>
+    <div class="section-title">
+      <h2>About</h2>
+    </div>
+
+    <div class="card about-card">
+      <p>
+        I am a QA Engineer with a passion for ensuring software quality and reliability. With a strong background in software development, I specialize in testing applications, identifying bugs, and improving user experience.
+      </p>
+
+      <p>
+        My expertise includes manual and automated testing, test case design, and quality assurance best practices. I am dedicated to delivering high-quality software products that meet user needs and exceed expectations.
+      </p>
+
+      <div class="chip-row">
+        <span class="chip">Docker</span>
+        <span class="chip">Manual Testing</span>
+        <span class="chip">Python Selenium</span>
+        <span class="chip">CI/CD</span>
+        <span class="chip">Appium</span>
+        <span class="chip">Bug Identification</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <!-- <div>
+    <div class="section-title">
+      <h2>Contact</h2>
+    </div>
+
+    <div class="card">
+      <p style="color:var(--muted); margin-top:0;">
+        Feel free to reach out for collaborations, opportunities, or just to connect!
+      </p>
+
+      <div class="contact-list">
+        <a class="contact-item" href="mailto:robertoboulos002@gmail.com">
+          <div>
+            <small>Email</small>
+            <strong>robertoboulos002@gmail.com</strong>
+          </div>
+          <span>↗</span>
+        </a>
+
+        <a class="contact-item" href="https://github.com/robertoboulos002-ux" target="_blank">
+          <div>
+            <small>GitHub</small>
+            <strong>github.com/robertoboulos002-ux</strong>
+          </div>
+          <span>↗</span>
+        </a>
+
+        <a class="contact-item" href="https://www.linkedin.com/in/roberto-boulos-b77820248/" target="_blank">
+          <div>
+            <small>LinkedIn</small>
+            <strong>linkedin.com/in/roberto-boulos-b77820248/</strong>
+          </div>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div> -->
+        
+        </div> 
 
           <!-- <div class="card">
             <div class="timeline">
@@ -1054,43 +1124,47 @@ Completed a V2 Beta REST API documentation with all data types.
       </div>
     </section>
 
-    <!-- <section id="contact">
-      <div class="container contact-grid">
-        <div class="card">
-          <div class="section-title">
-            <h2>Contact</h2>
+    <section id="contact">
+      <div class="container">
+        <div>
+    <div class="section-title">
+      <h2>Contact</h2>
+    </div>
+
+    <div class="card">
+      <p style="color:var(--muted); margin-top:0;">
+        Feel free to reach out for collaborations, opportunities, or just to connect!
+      </p>
+
+      <div class="contact-list">
+        <a class="contact-item" href="mailto:robertoboulos002@gmail.com">
+          <div>
+            <small>Email</small>
+            <strong>robertoboulos002@gmail.com</strong>
           </div>
+          <span>↗</span>
+        </a>
 
-          <p style="color:var(--muted); margin-top:0;">
-            Feel free to reach out for collaborations, opportunities, or just to connect!
-          </p>
-
-          <div class="contact-list">
-            <a class="contact-item" href="mailto:robertoboulos002@gmail.com">
-              <div>
-                <small>Email</small>
-                <strong>robertoboulos002@gmail.com</strong>
-              </div>
-              <span>↗</span>
-            </a>
-
-            <a class="contact-item" href="https://github.com/robertoboulos002-ux" target="_blank" rel="noreferrer">
-              <div>
-                <small>GitHub</small>
-                <strong>github.com/robertoboulos002-ux</strong>
-              </div>
-              <span>↗</span>
-            </a>
-
-            <a class="contact-item" href="https://www.linkedin.com/in/roberto-boulos-b77820248/" target="_blank" rel="noreferrer">
-              <div>
-                <small>LinkedIn</small>
-                <strong>linkedin.com/in/roberto-boulos-b77820248/</strong>
-              </div>
-              <span>↗</span>
-            </a>
+        <a class="contact-item" href="https://github.com/robertoboulos002-ux" target="_blank">
+          <div>
+            <small>GitHub</small>
+            <strong>github.com/robertoboulos002-ux</strong>
           </div>
-        </div> -->
+          <span>↗</span>
+        </a>
+
+        <a class="contact-item" href="https://www.linkedin.com/in/roberto-boulos-b77820248/" target="_blank">
+          <div>
+            <small>LinkedIn</small>
+            <strong>linkedin.com/in/roberto-boulos-b77820248/</strong>
+          </div>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
 
         <!-- <div class="card">
           <div class="section-title" style="margin-bottom:1rem;">
@@ -1124,6 +1198,7 @@ Completed a V2 Beta REST API documentation with all data types.
           </div>
         </div>
       </div> -->
+      
     </section>
   </main>
 
