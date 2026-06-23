@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roberto Carlos Boulos | QA Engineer</title>
-  <meta name="description" content="Portfolio of Roberto Carlos Boulos, QA Engineer testing software applications and ensuring quality standards." />
+  <meta name="description"
+    content="Portfolio of Roberto Carlos Boulos, QA Engineer testing software applications and ensuring quality standards." />
   <meta name="theme-color" content="#070b14" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +18,13 @@
       --bg-soft: #0c1220;
       --panel: rgba(13, 19, 33, 0.82);
       --panel-strong: rgba(8, 12, 22, 0.96);
-      --line: rgba(255,255,255,0.08);
+      --line: rgba(255, 255, 255, 0.08);
       --text: #eef3ff;
       --muted: #9eacc8;
       --accent: #65d8ff;
       --accent-2: #7c5cff;
       --accent-3: #00ffa3;
-      --shadow: 0 20px 70px rgba(0,0,0,0.45);
+      --shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
       --radius: 22px;
       --max: 1180px;
     }
@@ -41,10 +42,15 @@
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 15% 20%, rgba(101,216,255,0.12), transparent 28%),
+        /* radial-gradient(circle at 15% 20%, rgba(101,216,255,0.12), transparent 28%),
         radial-gradient(circle at 85% 15%, rgba(124,92,255,0.18), transparent 24%),
         radial-gradient(circle at 60% 80%, rgba(0,255,163,0.10), transparent 22%),
-        linear-gradient(180deg, #060913 0%, #070b14 40%, #05070d 100%);
+        linear-gradient(180deg, #060913 0%, #070b14 40%, #05070d 100%); */
+        radial-gradient(circle at 12% 18%, rgba(0, 255, 200, 0.22), transparent 35%),
+        radial-gradient(circle at 85% 12%, rgba(120, 90, 255, 0.28), transparent 30%),
+        radial-gradient(circle at 60% 85%, rgba(0, 180, 255, 0.18), transparent 32%),
+        radial-gradient(circle at 40% 50%, rgba(255, 255, 255, 0.04), transparent 60%),
+        linear-gradient(180deg, #02040a 0%, #050816 45%, #02030a 100%);
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -54,12 +60,36 @@
       position: fixed;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+        /* linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); */
+        linear-gradient(rgba(0, 255, 200, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120, 90, 255, 0.05) 1px, transparent 1px);
       background-size: 40px 40px;
-      mask-image: linear-gradient(to bottom, rgba(255,255,255,0.55), transparent 85%);
+      mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.55), transparent 85%);
       pointer-events: none;
       z-index: -1;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 255, 200, 0.06), transparent 60%);
+      animation: pulseGlow 8s ease-in-out infinite;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    @keyframes pulseGlow {
+
+      0%,
+      100% {
+        opacity: 0.4;
+      }
+
+      50% {
+        opacity: 0.8;
+      }
     }
 
     a {
@@ -83,7 +113,7 @@
       z-index: 50;
       backdrop-filter: blur(14px);
       background: rgba(5, 8, 14, 0.72);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .nav-inner {
@@ -108,9 +138,9 @@
       border-radius: 14px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, rgba(101,216,255,0.18), rgba(124,92,255,0.3));
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 10px 20px rgba(0,0,0,0.25);
+      background: linear-gradient(135deg, rgba(101, 216, 255, 0.18), rgba(124, 92, 255, 0.3));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 10px 20px rgba(0, 0, 0, 0.25);
       font-size: 0.95rem;
     }
 
@@ -143,8 +173,8 @@
       gap: .55rem;
       padding: .5rem .85rem;
       border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       color: #b9c6e1;
       font-size: .88rem;
       margin-bottom: 1.25rem;
@@ -156,7 +186,7 @@
       height: 9px;
       border-radius: 999px;
       background: linear-gradient(180deg, var(--accent), var(--accent-3));
-      box-shadow: 0 0 18px rgba(101,216,255,0.8);
+      box-shadow: 0 0 18px rgba(101, 216, 255, 0.8);
     }
 
     h1 {
@@ -195,7 +225,7 @@
       padding: .95rem 1.2rem;
       border-radius: 14px;
       font-weight: 600;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       transition: transform .2s ease, border-color .2s ease, background .2s ease;
     }
 
@@ -204,20 +234,20 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, rgba(101,216,255,0.18), rgba(124,92,255,0.24));
+      background: linear-gradient(135deg, rgba(101, 216, 255, 0.18), rgba(124, 92, 255, 0.24));
       box-shadow: 0 18px 40px rgba(14, 21, 37, 0.6);
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
       color: var(--text);
     }
 
     .hero-card {
       position: relative;
       padding: 1rem;
-      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 28px;
       box-shadow: var(--shadow);
       overflow: hidden;
@@ -230,7 +260,7 @@
       width: 240px;
       height: 240px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(124,92,255,0.24), transparent 70%);
+      background: radial-gradient(circle, rgba(124, 92, 255, 0.24), transparent 70%);
       filter: blur(20px);
       pointer-events: none;
     }
@@ -239,7 +269,7 @@
       position: relative;
       border-radius: 24px;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       background: #0c1018;
       aspect-ratio: 4 / 5;
     }
@@ -261,8 +291,8 @@
       justify-content: space-between;
       gap: 1rem;
       padding: .9rem 1rem;
-      background: rgba(5,8,14,0.74);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(5, 8, 14, 0.74);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
       backdrop-filter: blur(14px);
     }
@@ -286,8 +316,8 @@
 
     .stat {
       padding: 1rem 1.1rem;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       border-radius: 18px;
     }
 
@@ -355,8 +385,8 @@
     .chip {
       padding: .6rem .85rem;
       border-radius: 999px;
-      background: rgba(255,255,255,0.045);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       color: #dce6fa;
       font-size: .92rem;
     }
@@ -369,8 +399,8 @@
     .timeline-item {
       position: relative;
       padding: 1.2rem 1.2rem 1.2rem 1.35rem;
-      border-left: 2px solid rgba(101,216,255,0.3);
-      background: rgba(255,255,255,0.03);
+      border-left: 2px solid rgba(101, 216, 255, 0.3);
+      background: rgba(255, 255, 255, 0.03);
       border-radius: 0 18px 18px 0;
     }
 
@@ -383,7 +413,7 @@
       height: 14px;
       border-radius: 50%;
       background: linear-gradient(180deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 0 4px rgba(101,216,255,0.08);
+      box-shadow: 0 0 0 4px rgba(101, 216, 255, 0.08);
     }
 
     .meta {
@@ -431,7 +461,7 @@
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(101,216,255,0.12), transparent 70%);
+      background: radial-gradient(circle, rgba(101, 216, 255, 0.12), transparent 70%);
       pointer-events: none;
     }
 
@@ -463,8 +493,8 @@
     .tag {
       font-size: .82rem;
       color: #d6e0f8;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       padding: .45rem .7rem;
       border-radius: 999px;
     }
@@ -506,8 +536,8 @@
       gap: 1rem;
       padding: 1rem 1.05rem;
       border-radius: 16px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     .contact-item small {
@@ -528,7 +558,7 @@
       gap: 1rem;
       flex-wrap: wrap;
       padding-top: 1.4rem;
-      border-top: 1px solid rgba(255,255,255,0.07);
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     @media (max-width: 1100px) {
@@ -546,6 +576,7 @@
     }
 
     @media (max-width: 860px) {
+
       .hero-grid,
       .grid-2,
       .contact-grid,
@@ -597,6 +628,7 @@
     }
   </style>
 </head>
+
 <body>
   <nav class="nav">
     <div class="container nav-inner">
@@ -613,35 +645,36 @@
         <a href="#education">Education</a>
         <a href="#Certification">Certifications</a>
         <a href="#contact">Contact</a>
-        
+
       </div>
     </div>
   </nav>
 
-<section class="hero">
-  <div class="container hero-grid">
+  <section class="hero">
+    <div class="container hero-grid">
 
-    <!-- LEFT: TEXT -->
-    <div>
-      <div class="eyebrow">Software Quality Assurance Engineer</div>
+      <!-- LEFT: TEXT -->
+      <div>
+        <div class="eyebrow">Software Quality Assurance Engineer</div>
 
-      <!-- <h1>
+        <!-- <h1>
         Building <span class="gradient">AI systems</span><br>
         from research to production.
       </h1> -->
 
-      <p>
-        I am Roberto Boulos, a QA Engineer passionate about testing software applications and ensuring quality standards.
-        With a strong background in software development and a keen eye for detail, 
-        I specialize in identifying bugs, improving user experience, and enhancing overall product reliability.
-      </p>
+        <p>
+          I am Roberto Boulos, a QA Engineer passionate about testing software applications and ensuring quality
+          standards.
+          With a strong background in software development and a keen eye for detail,
+          I specialize in identifying bugs, improving user experience, and enhancing overall product reliability.
+        </p>
 
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#projects">View Projects</a>
-        <a class="btn btn-secondary" href="mailto:robertoboulos002@gmail.com">Contact Me</a>
-      </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-secondary" href="mailto:robertoboulos002@gmail.com">Contact Me</a>
+        </div>
 
-      <!-- <div class="stats">
+        <!-- <div class="stats">
         <div class="stat">
           <strong></strong>
           
@@ -659,33 +692,33 @@
 
        
       </div> -->
-    </div>
-
-    <!-- RIGHT: IMAGE -->
-    <div class="hero-card">
-      <div class="photo-wrap">
-        <img src="profile.JPG" alt="Portrait of Roberto Boulos" />
       </div>
 
-      <div class="floating-badge">
-        <div>
-          <strong>Based in Lebanon</strong>
-          <span>QA Engineer · Testing · Quality Assurance</span>
+      <!-- RIGHT: IMAGE -->
+      <div class="hero-card">
+        <div class="photo-wrap">
+          <img src="profile.JPG" alt="Portrait of Roberto Boulos" />
         </div>
 
-        <!-- <div>
+        <div class="floating-badge">
+          <div>
+            <strong>Based in Lebanon</strong>
+            <span>QA Engineer · Testing · Quality Assurance</span>
+          </div>
+
+          <!-- <div>
           <strong>Open to impact</strong>
           <span>Healthcare · SaaS · Applied AI</span>
         </div> -->
+        </div>
       </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
-
-    <section id="about">
-      <div class="container">
-        <!-- <div class="section-title">
+  <section id="about">
+    <div class="container">
+      <!-- <div class="section-title">
           <h2>About</h2>
           </div>
 
@@ -750,33 +783,35 @@
           <div class="grid-2">
 
   <!-- ABOUT -->
-  <div>
-    <div class="section-title">
-      <h2>About</h2>
-    </div>
+      <div>
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
 
-    <div class="card about-card">
-      <p>
-        I am a QA Engineer with a passion for ensuring software quality and reliability. With a strong background in software development, I specialize in testing applications, identifying bugs, and improving user experience.
-      </p>
+        <div class="card about-card">
+          <p>
+            I am a QA Engineer with a passion for ensuring software quality and reliability. With a strong background in
+            software development, I specialize in testing applications, identifying bugs, and improving user experience.
+          </p>
 
-      <p>
-        My expertise includes manual and automated testing, test case design, and quality assurance best practices. I am dedicated to delivering high-quality software products that meet user needs and exceed expectations.
-      </p>
+          <p>
+            My expertise includes manual and automated testing, test case design, and quality assurance best practices.
+            I am dedicated to delivering high-quality software products that meet user needs and exceed expectations.
+          </p>
 
-      <div class="chip-row">
-        <span class="chip">Docker</span>
-        <span class="chip">Manual Testing</span>
-        <span class="chip">Python Selenium</span>
-        <span class="chip">CI/CD</span>
-        <span class="chip">Appium</span>
-        <span class="chip">Bug Identification</span>
+          <div class="chip-row">
+            <span class="chip">Docker</span>
+            <span class="chip">Manual Testing</span>
+            <span class="chip">Python Selenium</span>
+            <span class="chip">CI/CD</span>
+            <span class="chip">Appium</span>
+            <span class="chip">Bug Identification</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- CONTACT -->
-  <!-- <div>
+      <!-- CONTACT -->
+      <!-- <div>
     <div class="section-title">
       <h2>Contact</h2>
     </div>
@@ -815,10 +850,10 @@
   </div>
 
 </div> -->
-        
-        </div> 
 
-          <!-- <div class="card">
+    </div>
+
+    <!-- <div class="card">
             <div class="timeline">
               <div class="timeline-item">
                 <div class="meta">
@@ -847,106 +882,127 @@
           </div>
         </div>
       </div> -->
-    </section>
+  </section>
 
-    <section id="experience">
-      <div class="container">
-        <div class="section-title">
-          <h2>Experience</h2>
-         
-        </div>
+  <section id="experience">
+    <div class="container">
+      <div class="section-title">
+        <h2>Experience</h2>
 
-        <div class="timeline">
-          <div class="card timeline-item">
-            <div class="meta">
-              <strong>Software Quality Assurance Engineer · Beytek S.A.L Offshore</strong>
-              <span>Lebanon · August 2024 – Present</span>
-            </div>
-            <p>   
-            Review processes, technical designs, and requirements to ensure quality standards. 
-            Create  and execute structured test plans, test cases, and positive/negative test scenarios.
+      </div>
+
+      <div class="timeline">
+        <div class="card timeline-item">
+          <div class="meta">
+            <strong>Software Quality Assurance Engineer · Beytek S.A.L Offshore</strong>
+            <span>Lebanon · August 2024 – Present</span>
+          </div>
+          <p>
+            Review processes, technical designs, and requirements to ensure quality standards.
+            Create and execute structured test plans, test cases, and positive/negative test scenarios.
             Perform API testing, database validation, UI/UX, and mobile application testing.
             Coordinate regression testing, track bugs, and monitor debugging results.
             Collaborate with teams, track quality metrics, and apply new testing tools and strategies.
-            </p>
-          </div>
+          </p>
+        </div>
 
-          <div class="card timeline-item">
-            <div class="meta">
-              <strong>Intern Quality Assurance Analyst · FOO</strong>
-              <span>Lebanon · Nov 2023 – Feb 2024</span>
-            </div>
-            <p>
-              Followed the software development life cycle.
-Communicated testing progress with the QA team to deliver a bug-free product.
-Created test cases and steps for the application or software to include all possible scenarios.
-Presented every sprint and conducted full regression testing after each one.
-            </p>
+        <div class="card timeline-item">
+          <div class="meta">
+            <strong>Intern Quality Assurance Analyst · FOO</strong>
+            <span>Lebanon · Nov 2023 – Feb 2024</span>
           </div>
+          <p>
+            Followed the software development life cycle.
+            Communicated testing progress with the QA team to deliver a bug-free product.
+            Created test cases and steps for the application or software to include all possible scenarios.
+            Presented every sprint and conducted full regression testing after each one.
+          </p>
+        </div>
 
-          <div class="card timeline-item">
-            <div class="meta">
-              <strong>Intern Quality Assurance Analyst · JobDiva</strong>
-              <span>Lebanon · April 2023 - Jul 2023</span>
-            </div>
-            <p>
-              Managed all API business needs and requests with the client.
-Worked on many software such as REST API and Postman.
-Completed a V2 Beta REST API documentation with all data types.
-            </p>
+        <div class="card timeline-item">
+          <div class="meta">
+            <strong>Intern Quality Assurance Analyst · JobDiva</strong>
+            <span>Lebanon · April 2023 - Jul 2023</span>
           </div>
+          <p>
+            Managed all API business needs and requests with the client.
+            Worked on many software such as REST API and Postman.
+            Completed a V2 Beta REST API documentation with all data types.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="projects">
-      <div class="container">
-        <div class="section-title">
-          <h2>Projects</h2>
+  <section id="projects">
+    <div class="container">
+      <div class="section-title">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <div class="project-top">
+            <h3 class="project-title">E-Commerce Website</h3>
+            <!-- <a href="https://github.com/Joseph-elias/E-Commerce-Website" target="_blank" rel="noreferrer">↗</a> -->
           </div>
+          <p>
+            A modern e-commerce platform built with a focus on user experience and performance.
+          </p>
+          <p>
+            Shopshpere is a full-stack web application designed to provide a seamless online shopping experience for
+            users.
+            It contains two sides: the user side, where customers can browse products, add them to their cart, and make
+            purchases; and the admin side, where administrators can manage products, view orders, and handle customer
+            inquiries.
+          </p>
+          <div class="tag-list">
+            <span class="tag">HTML, CSS, JavaScript</span>
+            <span class="tag">PHP, MySQL</span>
+            <span class="tag">UML</span>
+            <span class="tag">Git</span>
+            <span class="tag">Class Diagram</span>
+          </div>
+        </article>
 
-        <div class="grid-2">
-          <article class="card">
-            <div class="project-top">
-              <h3 class="project-title">E-Commerce Website</h3>
-              <!-- <a href="https://github.com/Joseph-elias/E-Commerce-Website" target="_blank" rel="noreferrer">↗</a> -->
-            </div>
-            <p>
-              A modern e-commerce platform built with a focus on user experience and performance.
-            </p>
-            <p>
-              Shopshpere is a full-stack web application designed to provide a seamless online shopping experience for users.
-              It contains two sides: the user side, where customers can browse products, add them to their cart, and make purchases; and the admin side, where administrators can manage products, view orders, and handle customer inquiries.
-            </p>
-            <div class="tag-list">
-              <span class="tag">HTML, CSS, JavaScript</span>
-              <span class="tag">PHP, MySQL</span>
-              <span class="tag">UML</span>
-              <span class="tag">Git</span>
-              <span class="tag">Class Diagram</span>
-            </div>
-          </article>
+        <article class="card project">
+          <div class="project-top">
+            <h3 class="project-title">Koura Club Web Application</h3>
+            <!-- <a href="https://github.com/Joseph-elias/MediNetFusion" target="_blank" rel="noreferrer">↗</a> -->
+          </div>
+          <p>
+            A web application designed to manage club activities, memberships, and events.
+            Two sides: the user side, where members can view club information, register for events, and manage their
+            profiles; and the admin side, where administrators can oversee club operations, manage memberships, and
+            organize events.
 
-          <article class="card project">
-            <div class="project-top">
-              <h3 class="project-title">Koura Club Web Application</h3>
-              <!-- <a href="https://github.com/Joseph-elias/MediNetFusion" target="_blank" rel="noreferrer">↗</a> -->
-            </div>
-            <p>
-              A web application designed to manage club activities, memberships, and events.
-              Two sides: the user side, where members can view club information, register for events, and manage their profiles; and the admin side, where administrators can oversee club operations, manage memberships, and organize events.
+          </p>
+          <div class="tag-list">
+            <span class="tag">HTML, CSS, Javascript</span>
+            <span class="tag">PHP, MySQL</span>
+            <span class="tag">UML</span>
+            <span class="tag">Git</span>
+            <span class="tag">Class Diagram</span>
+          </div>
+        </article>
+        <article class="card project">
+          <div class="project-top">
+            <h3 class="project-title">Sports Dietitian Coach Website</h3>
+            <a href="https://github.com/robertoboulos002-ux/SportsDietitianWebsite" target="_blank" rel="noreferrer">↗</a>
+          </div>
+          <p>
+A full-stack web application developed for a sports dietitian and fitness trainer in Koura, Lebanon. The platform provides a professional online presence while enabling complete management of client appointments through a custom-built booking system.
 
-            </p>
-            <div class="tag-list">
-              <span class="tag">HTML, CSS, Javascript</span>
-              <span class="tag">PHP, MySQL</span>
-              <span class="tag">UML</span>
-              <span class="tag">Git</span>
-              <span class="tag">Class Diagram</span>
-            </div>
-          </article>
 
-          <!-- <article class="card project">
+          </p>
+          <div class="tag-list">
+            <span class="tag">React, Vite</span>
+            <span class="tag">Node.js, Express</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </article>
+
+        <!-- <article class="card project">
             <div class="project-top">
               <h3 class="project-title">SISSI AI Assistant</h3>
               <a href="https://github.com/Joseph-elias" target="_blank" rel="noreferrer">↗</a>
@@ -1010,28 +1066,28 @@ Completed a V2 Beta REST API documentation with all data types.
           </article>
         </div>
       </div> -->
-    </section>
+  </section>
 
-    <section id="skills">
-      <div class="container">
-        <div class="section-title">
-          <h2>Skills</h2>
-          <!-- <p>Core engineering stack across machine learning, MLOps, data systems, and software development.</p> -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-title">
+        <h2>Skills</h2>
+        <!-- <p>Core engineering stack across machine learning, MLOps, data systems, and software development.</p> -->
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Soft Skills</h3>
+          <div class="timeline">
+            <span>Excellent communication and collaboration skills</span>
+            <span>Problem Solving</span>
+            <span>Creative analytical thinking abilites</span>
+            <span>Organized &amp; detail oriented</span>
+            <span>Self-drive &amp; proactive</span>
+          </div>
         </div>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3>Soft Skills</h3>
-            <div class="timeline">
-              <span>Excellent communication and collaboration skills</span>
-              <span>Problem Solving</span>
-              <span>Creative analytical thinking abilites</span>
-              <span>Organized &amp; detail oriented</span>
-              <span>Self-drive &amp; proactive</span>
-            </div>
-          </div>
-
-          <!-- <div class="card skill-col">
+        <!-- <div class="card skill-col">
             <h3>MLOps &amp; Deployment</h3>
             <div class="skill-list">
               <span>FastAPI, Streamlit, Gradio</span>
@@ -1042,7 +1098,7 @@ Completed a V2 Beta REST API documentation with all data types.
             </div>
           </div> -->
 
-          <!-- <div class="card skill-col">
+        <!-- <div class="card skill-col">
             <h3>Data &amp; Research</h3>
             <div class="skill-list">
               <span>NumPy, Pandas, scikit-learn</span>
@@ -1053,118 +1109,118 @@ Completed a V2 Beta REST API documentation with all data types.
             </div>
           </div> -->
 
-          <div class="card skill-col">
-            <h3>Programming</h3>
-            <div class="skill-list">
-              <span>Python, Java, PHP, Javascript</span>
-              <span>SQL, MySQL, OOP, data structures </span>
-              <span>HTML, CSS</span>
-              <span>GitHub, Visual Studio</span>
-              <span>UML / Class Diagram</span>
-              <span>Selenium and Appium</span>
-            </div>
+        <div class="card skill-col">
+          <h3>Programming</h3>
+          <div class="skill-list">
+            <span>Python, Java, PHP, Javascript</span>
+            <span>SQL, MySQL, OOP, data structures </span>
+            <span>HTML, CSS</span>
+            <span>GitHub, Visual Studio</span>
+            <span>UML / Class Diagram</span>
+            <span>Selenium and Appium</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="education">
-      <div class="container">
-                    <div class="section-title" style="margin-bottom:1rem;">
-              <h2>Educations</h2>
-            </div>
-        <div class="grid-2">
-          <div class="card">
-            <!-- <div class="section-title" style="margin-bottom:1rem;">
+  <section id="education">
+    <div class="container">
+      <div class="section-title" style="margin-bottom:1rem;">
+        <h2>Education</h2>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <!-- <div class="section-title" style="margin-bottom:1rem;">
               <h2 style="font-size:1.4rem;">Education</h2>
             </div> -->
 
-            <div class="timeline">
-              <div class="timeline-item">
-                <div class="meta">
-                  <strong>Master 2 in Business Administration - Business Computer</strong>
-                  <span>Lebanese University · July 2024</span>
-                </div>
-                <p></p>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="meta">
+                <strong>Master 2 in Business Administration - Business Computer</strong>
+                <span>Lebanese University · July 2024</span>
               </div>
-              <div class="timeline-item">
-                <div class="meta">
-                  <strong>Master 1 in Business Administration - Business Computer</strong>
-                  <span>Lebanese University · September 2023</span>
-                </div>
-                <p></p>
+              <p></p>
+            </div>
+            <div class="timeline-item">
+              <div class="meta">
+                <strong>Master 1 in Business Administration - Business Computer</strong>
+                <span>Lebanese University · September 2023</span>
               </div>
+              <p></p>
+            </div>
 
-              <div class="timeline-item">
-                <div class="meta">
-                  <strong>Bachelor’s in Business Administration - Business Computer</strong>
-                  <span>Lebanese International University · 2019 – 2022</span>
-                </div>
-                <p></p>
+            <div class="timeline-item">
+              <div class="meta">
+                <strong>Bachelor’s in Business Administration - Business Computer</strong>
+                <span>Lebanese International University · 2019 – 2022</span>
               </div>
+              <p></p>
             </div>
-          </div>
-
-          <div class="card">
-            <div class="section-title" style="margin-bottom:1rem;">
-              <h2 style="font-size:1.4rem;">Languages</h2>
-            </div>
-
-            <div class="chip-row">
-              <span class="chip">Arabic — Native</span>
-              <span class="chip">English — Fluent</span>
-              <span class="chip">French — Fluent</span>
-            </div>
-
-            <div style="height:1rem"></div>
-
-            <div class="section-title" style="margin-bottom:1rem;">
-              <h2 style="font-size:1.4rem;">Career Direction</h2>
-            </div>
-
-            <p style="color:var(--muted); margin:0;">
-              Looking to contribute as an QA Engineer in teams building useful, scalable systems.
-            </p>
           </div>
         </div>
-      </div>
-    </section>
-       <section id="Certification">
-      <div class="container">
-                    <div class="section-title" style="margin-bottom:1rem;">
-              <h2>Certifications</h2>
-            </div>
-        <div class="grid-2">
-          <div class="card">
 
-
-            <div class="timeline">
-              <div class="timeline-item">
-                <div class="meta">
-                  <strong>Mobile Automation with Appium 2.0 and WebdriverIO</strong>
-                  <span>Udemy - November 2025</span>
-                </div>
-                <p></p>
-              </div>
-              <div class="timeline-item">
-                <div class="meta">
-                  <strong>Learn Generative AI in Software Testing</strong>
-                  <span>Udemy - November 2024</span>
-                </div>
-                <p></p>
-              </div>
-
-              <div class="timeline-item">
-                <div class="meta">
-                  <strong>Selenium Webdriver with PYTHON from Scratch+ Frameworks-</strong>
-                  <span>Udemy - August 2024</span>
-                </div>
-                <p></p>
-              </div>
-            </div>
+        <div class="card">
+          <div class="section-title" style="margin-bottom:1rem;">
+            <h2 style="font-size:1.4rem;">Languages</h2>
           </div>
 
-          <!-- <div class="card">
+          <div class="chip-row">
+            <span class="chip">Arabic — Native</span>
+            <span class="chip">English — Fluent</span>
+            <span class="chip">French — Fluent</span>
+          </div>
+
+          <div style="height:1rem"></div>
+
+          <div class="section-title" style="margin-bottom:1rem;">
+            <h2 style="font-size:1.4rem;">Career Direction</h2>
+          </div>
+
+          <p style="color:var(--muted); margin:0;">
+            Looking to contribute as an QA Engineer in teams building useful, scalable systems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="Certification">
+    <div class="container">
+      <div class="section-title" style="margin-bottom:1rem;">
+        <h2>Certifications</h2>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="meta">
+                <strong>Mobile Automation with Appium 2.0 and WebdriverIO</strong>
+                <span>Udemy - November 2025</span>
+              </div>
+              <p></p>
+            </div>
+            <div class="timeline-item">
+              <div class="meta">
+                <strong>Learn Generative AI in Software Testing</strong>
+                <span>Udemy - November 2024</span>
+              </div>
+              <p></p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="meta">
+                <strong>Selenium Webdriver with PYTHON from Scratch+ Frameworks-</strong>
+                <span>Udemy - August 2024</span>
+              </div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="card">
             <div class="section-title" style="margin-bottom:1rem;">
               <h2 style="font-size:1.4rem;">Languages</h2>
             </div>
@@ -1186,74 +1242,74 @@ Completed a V2 Beta REST API documentation with all data types.
             </p>
           </div>
         </div> -->
-              <div class="card">
+        <div class="card">
 
 
-            <div class="timeline">
-              <div class="timeline-item">
-                <div class="meta">
-                  <strong>IT Support Professional Certificate</strong>
-                  <span>coursera - August 2022</span>
-                </div>
-                <p></p>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="meta">
+                <strong>IT Support Professional Certificate</strong>
+                <span>coursera - August 2022</span>
               </div>
-              <div class="timeline-item">
-                <div class="meta">
-                  <strong>IT Software Developer (Microsoft Dynamics Track)</strong>
-                  <span>LASeR Lebanese Association for Scientific Research - November 2022</span>
-                </div>
-                <p></p>
-              </div>
-
-             
+              <p></p>
             </div>
+            <div class="timeline-item">
+              <div class="meta">
+                <strong>IT Software Developer (Microsoft Dynamics Track)</strong>
+                <span>LASeR Lebanese Association for Scientific Research - November 2022</span>
+              </div>
+              <p></p>
+            </div>
+
+
           </div>
+        </div>
       </div>
-    </section>
+  </section>
 
-    <section id="contact">
-      <div class="container">
-        <div>
-    <div class="section-title">
-      <h2>Contact</h2>
-    </div>
+  <section id="contact">
+    <div class="container">
+      <div>
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
 
-    <div class="card">
-      <p style="color:var(--muted); margin-top:0;">
-        Feel free to reach out for collaborations, opportunities, or just to connect!
-      </p>
+        <div class="card">
+          <p style="color:var(--muted); margin-top:0;">
+            Feel free to reach out for collaborations, opportunities, or just to connect!
+          </p>
 
-      <div class="contact-list">
-        <a class="contact-item" href="mailto:robertoboulos002@gmail.com">
-          <div>
-            <small>Email</small>
-            <strong>robertoboulos002@gmail.com</strong>
+          <div class="contact-list">
+            <a class="contact-item" href="mailto:robertoboulos002@gmail.com">
+              <div>
+                <small>Email</small>
+                <strong>robertoboulos002@gmail.com</strong>
+              </div>
+              <span>↗</span>
+            </a>
+
+            <a class="contact-item" href="https://github.com/robertoboulos002-ux" target="_blank">
+              <div>
+                <small>GitHub</small>
+                <strong>github.com/robertoboulos002-ux</strong>
+              </div>
+              <span>↗</span>
+            </a>
+
+            <a class="contact-item" href="https://www.linkedin.com/in/roberto-boulos-b77820248/" target="_blank">
+              <div>
+                <small>LinkedIn</small>
+                <strong>linkedin.com/in/roberto-boulos-b77820248/</strong>
+              </div>
+              <span>↗</span>
+            </a>
           </div>
-          <span>↗</span>
-        </a>
-
-        <a class="contact-item" href="https://github.com/robertoboulos002-ux" target="_blank">
-          <div>
-            <small>GitHub</small>
-            <strong>github.com/robertoboulos002-ux</strong>
-          </div>
-          <span>↗</span>
-        </a>
-
-        <a class="contact-item" href="https://www.linkedin.com/in/roberto-boulos-b77820248/" target="_blank">
-          <div>
-            <small>LinkedIn</small>
-            <strong>linkedin.com/in/roberto-boulos-b77820248/</strong>
-          </div>
-          <span>↗</span>
-        </a>
+        </div>
       </div>
-    </div>
-  </div>
 
 
 
-        <!-- <div class="card">
+      <!-- <div class="card">
           <div class="section-title" style="margin-bottom:1rem;">
             <h2 style="font-size:1.4rem;">Quick Snapshot</h2>
           </div>
@@ -1285,8 +1341,8 @@ Completed a V2 Beta REST API documentation with all data types.
           </div>
         </div>
       </div> -->
-      
-    </section>
+
+  </section>
   </main>
 
   <footer>
@@ -1300,4 +1356,5 @@ Completed a V2 Beta REST API documentation with all data types.
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
